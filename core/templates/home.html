@@ -1,0 +1,935 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NepTech | Innovative IT Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+      :root {
+  --brand-green: #1ea84b;
+  --light-bg: #eef9f1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  background: #fff;
+  position: relative; /* Essential for centering links */
+  padding-right: 50px;
+  top: 0;
+  padding-right: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);;
+  z-index: 1000; /* Space for the right-side button */
+}
+
+
+
+/* --- LOGO SECTION --- */
+.nav-logo {
+  height: 100%;
+}
+
+.logo-bg {
+  background-color: var(--light-bg);
+  height: 100%;
+  padding: 0 60px 0 40px;
+  display: flex;
+  align-items: center;
+  /* This creates the specific curve from the original image */
+  border-bottom-right-radius: 80px; 
+}
+
+.logo-bg img {
+  height: 45px;
+}
+
+
+.brand-logo-img {
+    width: 60px;         /* Keeps the aspect ratio perfect */
+    height: 60px;        /* Adjust this number to make it smaller or larger */
+    max-width: 180px;    /* Prevents it from ever getting too wide */
+    object-fit: contain; /* Ensures the image isn't stretched */
+    display: block;
+ 
+}
+
+/* Optional: Add spacing around the logo if it feels cramped */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #38dfda;
+    margin-bottom: 20px;
+}
+/* --- CENTER LINKS SECTION --- */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* This forces it to the mathematical center */
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- RIGHT SIDE ACTIONS --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.phone-num {
+  color: var(--brand-green);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.enquiry-btn {
+  border: 1.5px solid var(--brand-green);
+  color: var(--brand-green);
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.enquiry-btn:hover {
+  background: var(--brand-green);
+  color: white;
+}
+
+/* Small dropdown arrow icon */
+.arrow {
+  width: 0; 
+  height: 0; 
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #333;
+  margin-left: 6px;
+  margin-top: 2px;
+}
+  
+
+:root {
+  --brand-green: #e9f7ef; /* Light background from your image */
+  --accent-green: #2ecc71;
+}
+
+.hero-section {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.hero-card {
+    background: rgba(233, 247, 239, 0.7); /* Frosted glass look */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+.logo-container {
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #333;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    background: linear-gradient(to right, #2ecc71, #1abc9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background: white;
+  border: 2px solid var(--accent-green);
+  color: var(--accent-green);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* The decorative circle from the image */
+.green-circle-bg {
+  width: 400px;
+  height: 400px;
+  background: #82e0aa;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+
+
+.service-icon {
+    width: 150px;           /* Adjust size to match your design */
+    height: 150px;
+    object-fit: contain;   /* Keeps the image aspect ratio correct */
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    /* Optional: adds a nice hover effect to your cards */
+    padding: 2rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    
+    transform: translateY(-12px);
+    border-color: var(--accent-green);
+    box-shadow: 0 20px 25px -5px rgba(46, 204, 113, 0.15);
+}
+      
+        @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.orbit-ring {
+    border: 3px dashed #0ea5e9; /* Skyblue dash color */
+    animation: spin 15s linear infinite;
+}
+
+.inner-circle {
+    background: #f0f9ff; /* Very light skyblue */
+    box-shadow: inset 0 0 40px rgba(14, 165, 233, 0.1);
+}
+
+
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; }
+        nav { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: white; }
+        .logo { font-size: 24px; font-weight: bold; color: #0D98BA; }
+        
+        .hero { padding: 80px 10%; display: flex; align-items: center; background: #f9f9f9; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 800; }
+        .hero-text span { color: #0D98BA; }
+        .btn { background: #0D98BA; color: white; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
+
+        .services-section { padding: 80px 10%; text-align: center; }
+        
+        /* RENAMED TO AVOID CONFLICT WITH TAILWIND */
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+
+        @media (max-width: 992px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        .card { padding: 40px 20px; border: 1px solid #eee; border-radius: 10px; transition: 0.3s; background: white; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #0D98BA; }
+        .card i { font-size: 40px; color: #0D98BA; margin-bottom: 20px; }
+
+
+        /* Container sizing */
+.hero-image {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+/* The Background Circle Animation */
+.green-circle-bg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #82e0aa 0%, #2ecc71 100%);
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(30px);
+    z-index: 1;
+    animation: pulseCircle 4s ease-in-out infinite;
+}
+
+/* Main Expert Photo */
+.main-hero-img {
+    position: relative;
+    width: 350px;
+    z-index: 5;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));
+    object-fit: cover;
+}
+
+/* Small Floating Badges */
+.floating-badge {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.floating-badge img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Positioning the Badges around the circle */
+.b-web { top: 10%; left: 10%; animation: floatAnim 4s infinite ease-in-out; }
+.b-app { top: 5%; right: 15%; animation: floatAnim 5s infinite ease-in-out 1s; }
+.b-uiux { bottom: 20%; right: 5%; animation: floatAnim 6s infinite ease-in-out 0.5s; }
+
+/* Animations */
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulseCircle {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+
+}
+
+.footer-section {
+    position: relative;
+    padding: 80px 10% 40px;
+    background-image: url("{% static 'core/images/seo_banner.jpg.png' %}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates that cool parallax effect */
+    color: white;
+    overflow: hidden;
+}
+
+/* Dark Overlay Layer */
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Adjust 0.75 to make it darker/lighter */
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Turns your logo white for the dark background */
+}
+
+.brand-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5e0;
+}
+
+/* Icon & Info Styling */
+.info-block {
+    text-align: center;
+}
+
+.icon-circle {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.info-block h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info-block p {
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+/* Social & Bottom Bar */
+.footer-social {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 40px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #1ea84b;
+    border-color: #1ea84b;
+    transform: translateY(-5px);
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+    color: #a0aec0;
+}
+
+.footer-copyright a {
+    color: white;
+    text-decoration: none;
+    
+}
+/* Specific sizing for the Logo in the Footer */
+.footer-section .hero-top-logo {
+    width: 120px;           /* Adjust this to make it smaller or larger */
+    height: auto;
+    margin-bottom: 15px;
+    filter: none;           /* Removes the invert if you want the original logo colors */
+    display: block;
+}
+
+/* Adjust the brand-info column to align text better */
+.brand-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5e0;
+    text-align: left;       /* Ensure text is left-aligned under the logo */
+}
+
+    </style>
+</head>
+<body> 
+
+    <nav class="navbar">
+      <div class="nav-left"></div>
+      <!-- <div class="logo"> -->
+        <!-- <img src="your-logo-path.png" alt="NEPTECH"> -->
+      <!-- </div> -->
+     
+    
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About <i class="arrow down"></i></a></li>
+    
+     
+        <li><a href="#">Service <i class="arrow down"></i></a></li>
+        <li><a href="#">Pricing <i class="arrow down"></i></a></li>
+        <li><a href="#">Our Work</a></li>
+        <li><a href="#">Career</a></li>
+
+        <li><a href="#">Contact</a></li>
+      </ul>
+    
+      <div class="nav-right">
+        <a href="tel:9801848492" class="phone-link">
+          <span class="phone-icon">📞</span> 9817297998
+        </a>
+        <a href="#" class="btn-enquiry">Quick Enquiry</a>
+      </div>
+    </nav>
+
+
+
+    <section class="hero-section">
+      <div class="hero-card">
+        <div class="logo-container">
+          <img src="{% static 'core/images/logos.png.jpg' %}" alt="TecH-Infosys Logo" class="brand-logo-img">
+
+          <div class="logo">TecH-Infosys</div>
+        </div>
+    
+        <div class="hero-main">
+          <div class="hero-text">
+            <h1>Transform Your Vision Into A <br><span>Digital Reality</span> With The Best IT Solutions</h1>
+            <p>We provide the best IT solutions to grow your business globally.</p>
+            
+            <div class="hero-buttons">
+              <button class="btn-primary">Let's Get Started</button>
+              <button class="btn-secondary">Discover Our Work</button>
+            </div>
+          </div>
+          
+          <div class="hero-image">
+            <div class="green-circle-bg"></div>
+            
+            <div class="main-photo-wrapper">
+                <img src="{% static 'core/images/cartoon-man.png' %}" class="main-hero-img" alt="Expert">
+            </div>
+        
+            <div class="floating-badge b-web">
+                <img src="{% static 'core/images/web_development.png' %}" alt="Web">
+            </div>
+            <div class="floating-badge b-app">
+                <img src="{% static 'core/images/app_development.png' %}" alt="App">
+            </div>
+            <div class="floating-badge b-uiux">
+                <img src="{% static 'core/images/ui_ux_design.png' %}" alt="UIUX">
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <h4 class="text-green-600 font-bold tracking-widest uppercase text-sm mb-2">
+        OUR SERVICES
+      </h4>
+    
+      <h2 class="text-4xl font-extrabold mb-12">
+        Exceptional Services For Your
+        <span class="text-blue-500">Business Growth</span>
+      </h2>
+
+
+      <div class="services-grid">
+        {% for service in services %}
+          
+          {% if service.title == "Web Development" %}
+            <a href="{% url 'web_development' %}" class="card text-center block hover:no-underline">
+          {% elif service.title == "Graphic Design" %}
+            <a href="{% url 'graphic_design' %}" class="card text-center block hover:no-underline">
+          {% elif service.title == "App Development" %}   
+            <a href="{% url 'app_development' %}" class="card text-center block hover:no-underline">
+
+          {% elif service.title == "Search Engine Optimization" %}    
+            <a href="{% url 'seo' %}" class="card text-center block hover:no-underline">
+
+          {% elif service.title == "UI/UX" %}  
+            <a href="{% url 'uiux_design' %}"  class="card text-center block hover:no-underline">
+
+
+          {% else %}
+            <div class="card text-center">
+          {% endif %}
+    
+              {% if service.image %}
+                <img src="{{ service.image.url }}" alt="{{ service.title }}" class="service-icon mx-auto">
+              {% else %}
+                <i class="fas fa-laptop-code"></i>
+              {% endif %}
+    
+              <h3 class="text-xl font-bold mt-4 mb-3">{{ service.title }}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{{ service.description }}</p>
+    
+          {# 2. Close tags based on the same logic #}
+          {% if service.title == "Web Development" or service.title == "Graphic Design" or service.title == "App Development" or service.title == "Search Engine Optimization" or service.title == "UI/UX" %}
+            </a>
+          {% else %}
+            </div>
+      
+          {% endif %}
+        {% empty %}
+          <p>No services added yet.</p>
+        {% endfor %}
+      </div>
+    </section>
+    
+
+
+
+
+    <section class="py-20 bg-white overflow-hidden relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[98%] h-[85%] bg-sky-50 rounded-[40px] z-0 shadow-inner pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 relative z-10">
+          
+          <div class="w-full lg:w-3/5">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-10 h-[2px] bg-green-500"></div>
+              <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Our Expertise</span>
+            </div>
+            
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-8 leading-tight">
+              Technologies We Rely On To <span class="text-blue-500">Achieve Success</span>
+            </h2>
+      
+            <div class="flex items-center gap-4 text-sm font-semibold text-gray-400 border-b border-gray-100 pb-4 mb-10">
+              <span onclick="filterTech('Web Development', this)" class="tech-tab text-green-500 border-r pr-4 border-gray-200 cursor-pointer">Web Development</span>
+              <span onclick="filterTech('App Development', this)" class="tech-tab hover:text-green-500 border-r pr-4 border-gray-200 cursor-pointer">App Development</span>
+              <span onclick="filterTech('Database', this)" class="tech-tab hover:text-green-500 border-r pr-4 border-gray-200 cursor-pointer">Database</span>
+              <span onclick="filterTech('Cloud Platform', this)" class="tech-tab hover:text-green-500 cursor-pointer">Cloud Platform</span>
+            </div>
+      
+            <div id="tech-grid" class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center min-h-[100px]">
+                {% for tech in technologies %}
+                <div class="tech-item transition-all duration-500" data-category="{{ tech.category }}">
+                    {% if tech.image %}
+                        <img src="{{ tech.image.url }}" class="h-10 mx-auto" alt="{{ tech.name }}">
+                    {% else %}
+                        <span class="text-[10px] text-gray-400 block text-center">Missing Image</span>
+                    {% endif %}
+                </div>
+                {% empty %}
+                <p class="col-span-full text-center text-gray-400">No technologies added in Admin yet.</p>
+                {% endfor %}
+            
+                
+                <!-- <div class="tech-item" data-category="Web Development"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="h-10 mx-auto"></div> -->
+                <!-- <div class="tech-item" data-category="Web Development"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" class="h-10 mx-auto"></div> -->
+                <!-- <div class="tech-item" data-category="Database"><img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" class="h-10 mx-auto"></div> -->
+            </div>
+          </div>
+    
+          <div class="w-full lg:w-2/5 relative flex justify-center items-center h-[550px]">
+            <div class="absolute w-[430px] h-[430px] rounded-full orbit-ring z-0 opacity-60"></div>
+            <div class="absolute w-[380px] h-[380px] inner-circle rounded-full z-0"></div>
+            <div class="relative z-10 w-[310px] flex flex-col items-center">
+                <img src="{% static 'core/images/cartoon-girl.png' %}" class="w-full drop-shadow-2xl transition-transform hover:scale-105 duration-500" />
+                <div class="mt-4 text-center text-[10px] font-black tracking-widest text-sky-600 bg-white/90 px-4 py-2 rounded-full shadow-lg border border-sky-100 uppercase">
+                  Developer Expert
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+<!-- CONNECT CTA SECTION -->
+<section class="py-24 bg-sky-50 relative overflow-hidden">
+
+    <!-- Decorative background shapes -->
+    <!-- <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[35%] h-[70%] bg-sky-100 rounded-l-[120px]"></div> -->
+    <!-- <div class="absolute bottom-10 right-20 w-32 h-32 bg-sky-100 rounded-3xl"></div> -->
+  
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      
+      <!-- Card -->
+      <div class="bg-sky-50 rounded-3xl p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-sm border border-sky-100">
+  
+        <!-- LEFT CONTENT -->
+        <div class="flex gap-6 max-w-xl">
+          <!-- Vertical Line -->
+          <div class="w-[3px] bg-green-500 rounded-full mt-2"></div>
+  
+          <div>
+            <h2 class="text-4xl font-extrabold leading-snug text-gray-900 max-w-xl">
+                Let’s connect and <span class="text-blue-500">turn your vision into reality.</span>
+              </h2>
+              
+  
+            <p class="mt-15 text-gray-600 text-sm leading-relaxed">
+              We are available from<br>
+              9:00 AM to 6:00 PM,<br>
+              Sunday to Friday.
+            </p>
+          </div>
+        </div>
+  
+        <!-- RIGHT CONTENT -->
+        <div class="text-center lg:text-right">
+          <p class="text-xs tracking-widest uppercase text-gray-500 font-semibold">
+            Reach out now!
+          </p>
+  
+          <h3 class="text-3xl font-extrabold text-black-500 mt-2">
+            9817297998
+          </h3>
+  
+          <button
+            id="openModal"
+            href="tel:981729798"
+            class="inline-block mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-full transition"
+          >
+            Let’s Start Conversation
+          </button>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="footer-overlay"></div>
+    
+    <div class="footer-content">
+        <div class="footer-container">
+            <div class="footer-col brand-info">
+                <img src="{% static 'core/images/logos.png.jpg' %}" alt=" Logo" class="hero-top-logo">
+                <p>TecH-Infosys is the catalyst for obtaining digital excellence in Nepal, providing a seamless transition into the tech world through innovative solutions.</p>
+            </div>
+
+
+            <div class="footer-col link-list">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                  <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+              </ul>
+          </div>
+
+            <div class="footer-col info-block">
+                <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Address</h3>
+                <p>Sankhamul, Kathmandu<br>Nepal</p>
+            </div>
+
+          
+
+            <div class="footer-col info-block">
+                <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                <h3>Phone</h3>
+                <p>9817297998<br></p>
+            </div>
+
+            <div class="footer-col info-block">
+                <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
+                <p>info@neptech.com.np</p>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <h3>Stay Connected</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61569830708216" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>©2026 - TecH-Infosys | All rights reserved | <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- PREMIUM CONTACT MODAL -->
+<div id="contactModal"
+     class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden items-center justify-center z-50 transition-opacity duration-300">
+
+  <div id="modalBox"
+       class="bg-white w-[95%] max-w-6xl rounded-3xl shadow-2xl relative overflow-hidden transform scale-95 opacity-0 transition-all duration-300">
+
+    <!-- Close Button -->
+    <button id="closeModal"
+            class="absolute top-6 right-6 text-2xl font-bold text-gray-600 hover:text-red-500">
+      ✕
+    </button>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+
+      <!-- LEFT SIDE FORM -->
+      <div class="p-10 lg:p-14">
+
+        <p class="text-sm text-gray-500 mb-2">Have a Project in Mind</p>
+        <h2 class="text-4xl font-extrabold mb-8">Tell Us A Bit More</h2>
+
+        <form method="POST" action="{% url 'contact_submit' %}" class="space-y-5">
+          {% csrf_token %}
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" name="name" placeholder="Name *"
+                   class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-green-500 outline-none" required>
+
+            <input type="email" name="email" placeholder="Email *"
+                   class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-green-500 outline-none" required>
+          </div>
+
+          <input type="text" name="phone" placeholder="Phone Number"
+                 class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-green-500 outline-none">
+
+          <select name="service"
+                  class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-green-500 outline-none">
+            <option value="">--- Select Service ---</option>
+            <option>Web Development</option>
+            <option>App Development</option>
+            <option>SEO</option>
+            <option>UI/UX</option>
+          </select>
+
+          <textarea name="message" rows="4" placeholder="Write a Message *"
+                    class="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-green-500 outline-none"
+                    required></textarea>
+
+          <button type="submit"
+                  class="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300">
+            Submit
+          </button>
+        </form>
+
+      </div>
+
+      <!-- RIGHT INFO PANEL -->
+      <div class="bg-gradient-to-br from-green-400 to-green-600 text-white p-12 flex flex-col justify-center rounded-l-[120px]">
+
+        <h3 class="text-3xl font-bold mb-8">Get In Touch</h3>
+
+        <div class="space-y-6 text-lg">
+          <p>📞 9817297998</p>
+          <p>✉ info@neptech.com.np</p>
+          <p>📍 Sankhamul, Kathmandu</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+const openBtn = document.getElementById("openModal");
+const modal = document.getElementById("contactModal");
+const modalBox = document.getElementById("modalBox");
+const closeBtn = document.getElementById("closeModal");
+
+openBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+    setTimeout(() => {
+        modalBox.classList.remove("scale-95", "opacity-0");
+        modalBox.classList.add("scale-100", "opacity-100");
+    }, 10);
+});
+
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+});
+
+function closeModal() {
+    modalBox.classList.remove("scale-100", "opacity-100");
+    modalBox.classList.add("scale-95", "opacity-0");
+
+    setTimeout(() => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+    }, 300);
+}
+</script>
+
+<script>
+    function filterTech(category, element) {
+        const items = document.querySelectorAll('.tech-item');
+        const tabs = document.querySelectorAll('.tech-tab');
+    
+        // 1. Update Active Tab UI
+        tabs.forEach(tab => {
+            tab.classList.remove('text-green-500');
+            tab.classList.add('text-gray-400');
+        });
+        element.classList.add('text-green-500');
+        element.classList.remove('text-gray-400');
+    
+        // 2. Filter Logos based on Category
+        items.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+            if (itemCat === category) {
+                item.style.display = 'block';
+                setTimeout(() => { item.style.opacity = '1'; }, 10);
+            } else {
+                item.style.opacity = '0';
+                setTimeout(() => { item.style.display = 'none'; }, 300);
+            }
+        });
+    }
+    
+    // Set Web Development as default on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const firstTab = document.querySelector('.tech-tab');
+        if(firstTab) filterTech('Web Development', firstTab);
+    });
+    </script>
