@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'neptech_site.urls'
+ROOT_URLCONF = 'techinfosys.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'neptech_site.wsgi.application'
+WSGI_APPLICATION = 'techinfosys.wsgi.application'
 
 
 # Database
