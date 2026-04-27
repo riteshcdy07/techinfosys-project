@@ -1,365 +1,70 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Web Development | NepTech Academy</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #ffffff; 
-            color: #1a1a1a;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .hero-gradient {
             background: radial-gradient(circle at 80% 20%, #f0fff4 0%, #ffffff 100%);
         }
 
-        .glass-card {
-            background: #ffffff;
-            border: 1px solid #f0f0f0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.4s ease;
+        .footer-section {
+            padding: 80px 10% 40px;
+            background-image: url("/media/core/images/icons/SEO.PNG"); /* ✅ FIXED */
+            background-size: cover;
+            background-position: center;
+            color: white;
         }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(30, 168, 75, 0.1);
-            border-color: #1ea84b;
-        }
-
-        .btn-glow {
-            box-shadow: 0 10px 20px rgba(30, 168, 75, 0.2);
-        }
-        .step-number {
-    display: inline-block;
-    background: linear-gradient(135deg, #1ea84b 0%, #15803d 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-
     </style>
 </head>
+
 <body>
 
-    
+<!-- HERO -->
+<section class="hero-gradient pt-24 pb-20 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
 
-    <section class="hero-gradient pt-24 pb-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-            
-            <div class="lg:w-1/2 space-y-8">
-                <div class="inline-block px-4 py-2 bg-green-50 rounded-full text-green-600 font-bold text-xs uppercase tracking-widest">
-                    🚀 Future-Proof Your Career
-                </div>
-                <h1 class="text-6xl font-extrabold leading-tight text-slate-900">
-                    Why just visit websites when you can <span class="text-green-600">Build them?</span>
-                </h1>
-                <p class="text-xl text-slate-500 leading-relaxed">
-                    The demand for Web Developers in Nepal and globally is at an all-time high. Join the top 1% of earners by mastering the most versatile skill in the world.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg btn-glow hover:bg-green-700 transition-all">
-                        Secure My Future Now
-                    </button>
-                </div>
-            </div>
-
-            <div class="lg:w-1/2 relative">
-                <div class="relative z-0 transform hover:scale-105 transition-transform duration-700">
-                    <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg" 
-                         alt="Web Development Illustration" 
-                         class="w-full rounded-[40px] opacity-90">
-                </div>
-                    <div class="space-y-4">
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"><span>Entry Level</span><span>Rs. 45k</span></div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-300 h-full w-1/3"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-[10px] font-bold text-green-600 uppercase"><span>Senior Expert</span><span>Rs. 2.5L+</span></div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-green-500 h-full w-full animate-[width_3s_ease-out]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="lg:w-1/2">
+            <h1 class="text-5xl font-bold">Build Your Future</h1>
         </div>
-    </section>
 
-    <section class="py-24 px-6 bg-slate-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-4xl font-extrabold mb-6">Skills You’ll Master to <span class="text-green-600">Get Hired</span></h2>
-                <p class="text-slate-500 text-lg">We don't teach theory. we teach how to build products that people actually pay for.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-10 rounded-[40px]">
-                    <span class="step-number text-5xl font-black ">01</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Frontend Magic</h3>
-                    <p class="text-slate-500 mb-6">Master HTML, CSS, and React to build pixel-perfect user interfaces that leave clients speechless.</p>
-                    <div class="flex gap-3">
-                        <i class="fab fa-html5 text-2xl text-orange-500"></i>
-                        <i class="fab fa-css3-alt text-2xl text-blue-500"></i>
-                        <i class="fab fa-react text-2xl text-sky-400"></i>
-                    </div>
-                </div>
-
-                <div class="glass-card p-10 rounded-[40px] border-green-200">
-                    <span class="step-number text-5xl font-black ">02</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">Backend Authority</h3>
-                    <p class="text-slate-500 mb-6">Learn Django and Database architecture. Become the brain behind complex systems and apps.</p>
-                    <div class="flex gap-3">
-                        <i class="fab fa-python text-2xl text-blue-700"></i>
-                        <i class="fas fa-database text-2xl text-slate-600"></i>
-                    </div>
-                </div>
-
-                <div class="glass-card p-10 rounded-[40px]">
-                    <span class="step-number text-5xl font-black ">03</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-4">The Launchpad</h3>
-                    <p class="text-slate-500 mb-6">Deploy your projects to AWS and Vercel. Learn how to manage real traffic and scale your ideas.</p>
-                    <div class="flex gap-3">
-                        <i class="fab fa-aws text-2xl text-orange-400"></i>
-                        <i class="fas fa-rocket text-2xl text-purple-500"></i>
-                    </div>
-                </div>
-            </div>
+        <div class="lg:w-1/2">
+            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg"
+                 class="w-full rounded-2xl">
         </div>
-    </section>
 
-    <section class="py-24 px-6 text-center">
-        <div class="max-w-4xl mx-auto bg-slate-900 rounded-[50px] p-16 text-white shadow-2xl relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-5xl font-black mb-6">Ready to Start?</h2>
-                <p class="text-slate-400 text-xl mb-10">Limited Seats Available. Only 4 spots left for the January Batch.</p>
-                <button class="bg-green-500 text-white px-12 py-5 rounded-2xl font-extrabold text-xl hover:bg-green-400 transition-all transform hover:scale-105">
-                    Apply for Admission
-                </button>
-            </div>
-            <div class="absolute top-0 right-0 w-64 h-64 bg-green-500 rounded-full blur-[120px] opacity-20"></div>
-        </div>
-    </section>
+    </div>
+</section>
+
+<!-- SERVICES IMAGES (FIXED) -->
+<section class="p-10 text-center">
+    <img src="/media/core/images/icons/web_development.jpeg" class="w-32 inline-block">
+    <img src="/media/core/images/icons/SEO.PNG" class="w-32 inline-block">
+    <img src="/media/core/images/icons/app_development.jpeg" class="w-32 inline-block">
+    <img src="/media/core/images/icons/ui_ux_design.png" class="w-32 inline-block">
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+
+    <!-- LOGO FIXED -->
+    <img src="/media/tech_logos/Python-logo.jpg" width="120">
+
+    <p class="mt-4">TecH-Infosys is the catalyst for digital excellence in Nepal.</p>
+
+</footer>
 
 </body>
 </html>
-
-
-
-<style>
-
-    .footer-section {
-        position: relative;
-        padding: 80px 10% 40px;
-        background-image: url("{% static 'core/images/seo_banner.jpg.png' %}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed; /* Creates that cool parallax effect */
-        color: white;
-        overflow: hidden;
-    }
-    
-    /* Dark Overlay Layer */
-    .footer-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.75); /* Adjust 0.75 to make it darker/lighter */
-        z-index: 1;
-    }
-    
-    .footer-content {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .footer-container {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-        gap: 25px;
-        margin-bottom: 50px;
-    }
-    
-    .footer-logo {
-        height: 60px;
-        margin-bottom: 20px;
-        filter: brightness(0) invert(1); /* Turns your logo white for the dark background */
-    }
-    
-    .brand-info p {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #cbd5e0;
-    }
-    
-    /* Icon & Info Styling */
-    .info-block {
-        text-align: center;
-    }
-    
-    .icon-circle {
-        font-size: 24px;
-        color: white;
-        margin-bottom: 15px;
-    }
-    
-    .info-block h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        font-weight: 700;
-    }
-    
-    .info-block p {
-        font-size: 14px;
-        color: #e2e8f0;
-    }
-    
-    /* Social & Bottom Bar */
-    .footer-social {
-        text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        padding-top: 40px;
-    }
-    
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin: 20px 0;
-    }
-    
-    .social-icons a {
-        width: 45px;
-        height: 45px;
-        border: 1px solid rgba(255,255,255,0.4);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        transition: 0.3s ease;
-    }
-    
-    .social-icons a:hover {
-        background: #1ea84b;
-        border-color: #1ea84b;
-        transform: translateY(-5px);
-    }
-    
-    .footer-copyright {
-        text-align: center;
-        font-size: 13px;
-        margin-top: 30px;
-        color: #a0aec0;
-    }
-    
-    .footer-copyright a {
-        color: white;
-        text-decoration: none;
-        
-    }
-    /* Specific sizing for the Logo in the Footer */
-    .footer-section .hero-top-logo {
-        width: 120px;           /* Adjust this to make it smaller or larger */
-        height: auto;
-        margin-bottom: 15px;
-        filter: none;           /* Removes the invert if you want the original logo colors */
-        display: block;
-    }
-    
-    /* Adjust the brand-info column to align text better */
-    .brand-info p {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #cbd5e0;
-        text-align: left;       /* Ensure text is left-aligned under the logo */
-    }
-    
-        </style>
-    
-        
-    
-    <footer class="footer-section">
-        <div class="footer-overlay"></div>
-        
-        <div class="footer-content">
-            <div class="footer-container">
-                <div class="footer-col brand-info">
-                    <img src="{% static 'core/images/logos.png.jpg' %}" alt=" Logo" class="hero-top-logo">
-                    <p>TecH-Infosys is the catalyst for obtaining digital excellence in Nepal, providing a seamless transition into the tech world through innovative solutions.</p>
-                </div>
-    
-    
-                <div class="footer-col link-list">
-                  <h3>Quick Links</h3>
-                  <ul>
-                      <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                      <li><a href="#"><i class="fas fa-chevron-right"></i> Our Services</a></li>
-                      <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-                      <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                  </ul>
-              </div>
-    
-                <div class="footer-col info-block">
-                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Address</h3>
-                    <p>Sankhamul, Kathmandu<br>Nepal</p>
-                </div>
-    
-              
-    
-                <div class="footer-col info-block">
-                    <div class="icon-circle"><i class="fas fa-phone"></i></div>
-                    <h3>Phone</h3>
-                    <p>9817297998<br></p>
-                </div>
-    
-                <div class="footer-col info-block">
-                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <p>info@neptech.com.np</p>
-                </div>
-            </div>
-    
-            <div class="footer-social">
-                <h3>Stay Connected</h3>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61569830708216" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>©2026 - TecH-Infosys | All rights reserved | <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
-    
-    
-    
-    
-    
-    
-    
-    </body>
-    </html>
-    
     
     <script>
         function filterTech(category, element) {

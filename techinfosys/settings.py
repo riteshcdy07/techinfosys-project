@@ -31,8 +31,9 @@ ALLOWED_HOSTS = ['techinfosys-project.onrender.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'core',
     'jazzmin',
+    'core',
+   
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,8 +123,23 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles' 
-MEDIA_URL='media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+# Media files (User-uploaded icons/images)
+MEDIA_URL = '/media/'  # Added leading slash for consistency
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
+
+
+# Add this below your STATIC_ROOT
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
