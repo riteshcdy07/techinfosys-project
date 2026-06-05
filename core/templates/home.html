@@ -553,6 +553,333 @@ body {
     text-align: left;       /* Ensure text is left-aligned under the logo */
 }
 
+
+
+/* ================= RESPONSIVE DESIGN FOR LAPTOP + MOBILE ================= */
+
+/* Laptop / Desktop */
+@media (min-width: 993px) {
+  .navbar {
+    height: 90px;
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo-img {
+    width: 260px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+  }
+
+  .hero-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .navbar {
+    height: auto;
+    padding: 18px 30px;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo-img {
+    width: 220px;
+    max-height: 75px;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 15px;
+  }
+
+  .nav-right {
+    margin-left: auto;
+  }
+
+  .hero-section {
+    padding: 35px 25px;
+  }
+
+  .hero-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+    line-height: 1.25;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 420px;
+  }
+
+  .main-hero-img {
+    width: 300px;
+  }
+
+  .green-circle-bg {
+    width: 320px;
+    height: 320px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-logo-img {
+    width: 190px;
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    font-size: 15px;
+  }
+
+  .nav-right {
+    margin-top: 15px;
+  }
+
+  .btn-enquiry button,
+  .contact-btn {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+
+  .hero-section {
+    padding: 25px 15px;
+  }
+
+  .hero-card {
+    padding: 35px 15px;
+  }
+
+  .hero-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-primary {
+    padding: 12px 26px;
+    font-size: 15px;
+  }
+
+  .btn-secondary {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 320px;
+  }
+
+  .main-hero-img {
+    width: 230px;
+  }
+
+  .green-circle-bg {
+    width: 240px;
+    height: 240px;
+  }
+
+  .floating-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+
+  .services-section {
+    padding: 55px 18px;
+  }
+
+  .services-section h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 30px 18px;
+  }
+
+  .service-icon {
+    width: 115px;
+    height: 115px;
+  }
+
+  .footer-section {
+    padding: 55px 22px 35px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .brand-info p {
+    text-align: center;
+  }
+
+  .footer-section .hero-top-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    padding: 12px 18px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .nav-left {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .nav-logo-img {
+    width: 170px;
+    max-height: 65px;
+    object-fit: contain;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+    padding: 18px 0;
+    background: #ffffff;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-right {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .btn-enquiry button {
+    padding: 11px 24px;
+    font-size: 14px;
+  }
+}
+
     </style>
 </head>
 <body> 
@@ -560,32 +887,28 @@ body {
   <nav class="navbar">
     <div class="nav-left">
       <a href="/">
-        <img src="{% static 'core/images/office logo.png' %}" alt="Tech Infosys Logo" class="nav-logo-img">
+        <img src="{% static 'core/images/logoss.jpeg' %}" alt="Tech Infosys Logo" class="nav-logo-img">
       </a>
     </div>
   
-    
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About <i class="arrow down"></i></a></li>
-    
-     
-        <li><a href="#">Service <i class="arrow down"></i></a></li>
-        <li><a href="#">Pricing <i class="arrow down"></i></a></li>
-        <li><a href="#">Our Work</a></li>
-        <li><a href="#">Career</a></li>
-
-        <li><a href="#">Contact</a></li>
-      </ul>
-    
-      <div class="nav-right">
-        <a href="#" class="btn-enquiry">
-          <button type="button">Quick Enquiry</button>
-        </a>
-      </div>
-      
-    </nav>
-
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About <i class="arrow down"></i></a></li>
+      <li><a href="#">Service <i class="arrow down"></i></a></li>
+      <li><a href="#">Pricing <i class="arrow down"></i></a></li>
+      <li><a href="#">Our Work</a></li>
+      <li><a href="#">Career</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  
+    <div class="nav-right">
+      <a href="#" class="btn-enquiry">
+        <button type="button">Quick Enquiry</button>
+      </a>
+    </div>
+  </nav>
 
 
     <section class="hero-section">
@@ -995,4 +1318,12 @@ function closeModal() {
         const firstTab = document.querySelector('.tech-tab');
         if(firstTab) filterTech('Web Development', firstTab);
     });
+
+
+    
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+    document.querySelector(".nav-right").classList.toggle("active");
+  }
+
     </script>
