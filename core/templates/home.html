@@ -887,7 +887,7 @@ body {
   <nav class="navbar">
     <div class="nav-left">
       <a href="/">
-        <img src="{% static 'core/images/logoss.jpeg' %}" alt="Tech Infosys Logo" class="nav-logo-img">
+        <img src="{% static 'core/images/abc.jpeg' %}" alt="Tech Infosys Logo" class="nav-logo-img">
       </a>
     </div>
   
@@ -895,7 +895,7 @@ body {
   
     <ul class="nav-links" id="navLinks">
       <li><a href="#">Home</a></li>
-      <li><a href="#">About <i class="arrow down"></i></a></li>
+      <li><a href="{% url 'about' %}">About Us</a></li>
       <li><a href="#">Service <i class="arrow down"></i></a></li>
       <li><a href="#">Pricing <i class="arrow down"></i></a></li>
       <li><a href="#">Our Work</a></li>

@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.shortcuts import redirect
+
+
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import ContactMessage
 
 
@@ -17,7 +19,8 @@ def home(request):
         'technologies': technologies
     })
 
-
+def about(request):
+    return render (request, 'about.html')
 
 def web_development(request):
     return render(request, 'web_development.html')
@@ -40,14 +43,17 @@ def uiux_design(request):
     return render (request,'uiux_design.html')
 
 
-
 def contact_submit(request):
     if request.method == "POST":
         ContactMessage.objects.create(
-            name=request.POST.get("name"),
-            email=request.POST.get("email"),
-            phone=request.POST.get("phone"),
-            service=request.POST.get("service"),
-            message=request.POST.get("message"),
+            name=request.POST.get("name", "").strip(),
+            email=request.POST.get("email", "").strip(),
+            phone=request.POST.get("phone", "").strip(),
+            service=request.POST.get("service", "").strip(),
+            message=request.POST.get("message", "").strip(),
         )
+
+        messages.success(request, "Your message has been submitted successfully.")
+        return redirect("home")
+
     return redirect("home")
